@@ -1,5 +1,5 @@
 @echo off
-title [BETA] Razer executor by Razerdev (UseRazer) v1.1.3
+title [BETA] Razer executor by Razerdev (UseRazer) v1.0.3
 color 2
 :VersionCheck
 echo Suche nach Updates...
@@ -19,21 +19,20 @@ goto start
 :Update
 cls
 echo New Update! ( %NewVersion% )
-pause>NUL
+timeout /t 2 > NUL
 echo Downloading...
 echo.
 echo.
-bitsadmin /transfer "Update" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Razer%20multi-executor.bat %~dp0\Razermulti-executor-%NewVersion%.bat
+bitsadmin /transfer "Update" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Razermulti-executor.bat %~dp0\Razermulti-executor.bat
 echo.
 echo.
 echo Update Downloaded.
 echo please wait...
-del %~dp0\VersionInfo.txt
-del %~dp0\VersionInfoX.txt
-echo %NewVersion% >> %~dp0\VersionInfo.txt
+del %~dp0\Version.txt
+del %~dp0\VersionX.txt
+echo %NewVersion% >> %~dp0\Version.txt
 TITLE Razermulti-executor auto updater - %NewVersion%
-powershell Start-Process -FilePath "DeichCleaner-%NewVersion%.bat" -ArgumentList "%cd%" -verb runas >NUL 2>&1
-start /b "" cmd /c del "%~f0"&exit /b
+pause > NUL
 exit
 :start
 echo.
