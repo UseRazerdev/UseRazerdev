@@ -3,7 +3,7 @@ title [BETA] Razer executor by Razerdev (UseRazer) v1.1.3
 color 2
 :VersionCheck
 echo Suche nach Updates...
-bitsadmin /transfer "VersionCheck" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Version.txt %~dp0\Version.txt>NUL
+bitsadmin /transfer "VersionCheck" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Version.txt %~dp0\VersionX.txt>NUL
 set /p NewVersion=<%~dp0\VersionX.txt
 set /p oldVersion=<%~dp0\Version.txt
 if NOT %oldVersion% == %NewVersion% goto Update
