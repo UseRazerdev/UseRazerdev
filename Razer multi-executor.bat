@@ -1,5 +1,5 @@
 @echo off
-title [BETA] Razer executor by Razerdev (UseRazer) v1.0.3
+title [BETA] Razer executor by Razerdev (UseRazer) v1.1.3
 color 2
 :VersionCheck
 echo Suche nach Updates...
