@@ -146,12 +146,12 @@ goto C
 title booter by Razer
 cls
 color 2
-echo  " _____  _____   ____   _____ "
-echo  "|  __ \|  __ \ / __ \ / ____|"
-echo  "| |  | | |  | | |  | | (___  "
-echo  "| |  | | |  | | |  | |\___ \ " 
-echo  "| |__| | |__| | |__| |____) |"
-echo  "|_____/|_____/ \____/|_____/ "     
+echo  " _____  _____   ____   _____ 
+echo  "|  __ \|  __ \ / __ \ / ____|
+echo  "| |  | | |  | | |  | | (___  
+echo  "| |  | | |  | | |  | |\___ \  
+echo  "| |__| | |__| | |__| |____) |
+echo  "|_____/|_____/ \____/|_____/      
 echo.      
 timeout /t 1 > NUL
 set /p web=enter domain (if u know ip already just press enter):
@@ -161,7 +161,6 @@ set /p target=IP:
 timeout /t 1 > NUL
 echo choose methode "methode1 (working)/ methode2 (not working)"
 set /p methode=methode:
-pause > NUL
 echo processing...
 timeout /t 2 > NUL
 goto %methode%
@@ -180,12 +179,12 @@ if "%loop%"=="100" goto next
 goto :methode2
 :next
 cls
-echo  " _____  _____   ____   _____ "
-echo  "|  __ \|  __ \ / __ \ / ____|"
-echo  "| |  | | |  | | |  | | (___  "
-echo  "| |  | | |  | | |  | |\___ \ " 
-echo  "| |__| | |__| | |__| |____) |"
-echo  "|_____/|_____/ \____/|_____/ "     
+echo  " _____  _____   ____   _____ 
+echo  "|  __ \|  __ \ / __ \ / ____|
+echo  "| |  | | |  | | |  | | (___  
+echo  "| |  | | |  | | |  | |\___ \  
+echo  "| |__| | |__| | |__| |____) |
+echo  "|_____/|_____/ \____/|_____/      
 echo.      
 echo done, %web% is now stressed for a few minutes, press enter to close the program
 Pause > NUL
@@ -194,12 +193,12 @@ goto L
 title dislikebot by Razer
 cls
 color 2
-echo " _____ _____  _____ _      _____ _  ________ "
-echo "|  __ \_   _|/ ____| |    |_   _| |/ /  ____|"
-echo "| |  | || | | (___ | |      | | | ' /| |__   "
-echo "| |  | || |  \___ \| |      | | |  < |  __|  "
-echo "| |__| || |_ ____) | |____ _| |_| . \| |____ "
-echo "|_____/_____|_____/|______|_____|_|\_\______|"
+echo " _____ _____  _____ _      _____ _  ________ 
+echo "|  __ \_   _|/ ____| |    |_   _| |/ /  ____|
+echo "| |  | || | | (___ | |      | | | ' /| |__   
+echo "| |  | || |  \___ \| |      | | |  < |  __|  
+echo "| |__| || |_ ____) | |____ _| |_| . \| |____ 
+echo "|_____/_____|_____/|______|_____|_|\_\______|
 echo.
 echo enter a youtube.com url to start.
 set/p "URLS=URL:"
@@ -214,12 +213,12 @@ goto L
 color 2
 title viewbot by Razer
 cls
-echo " __      _______ ________          ______   ____ _______ "
-echo " \ \    / /_   _|  ____\ \        / /  _ \ / __ \__   __|"
-echo "  \ \  / /  | | | |__   \ \  /\  / /| |_) | |  | | | |   "
-echo "   \ \/ /   | | |  __|   \ \/  \/ / |  _ <| |  | | | |   "
-echo "    \  /   _| |_| |____   \  /\  /  | |_) | |__| | | |   "
-echo "     \/   |_____|______|   \/  \/   |____/ \____/  |_|   "
+echo " __      _______ ________          ______   ____ _______ 
+echo " \ \    / /_   _|  ____\ \        / /  _ \ / __ \__   __|
+echo "  \ \  / /  | | | |__   \ \  /\  / /| |_) | |  | | | |   
+echo "   \ \/ /   | | |  __|   \ \/  \/ / |  _ <| |  | | | |   
+echo "    \  /   _| |_| |____   \  /\  /  | |_) | |__| | | |   
+echo "     \/   |_____|______|   \/  \/   |____/ \____/  |_|   
 echo.            
 echo This bot doesnt work always, youtube sometimes detects the bot and delete the views again.
 echo.                                                                                                       
@@ -261,28 +260,16 @@ timeout /t 1 > NUL
 echo sending proxys to %boter%
 timeout /t 1 > NUL
 cls
-echo " __      _______ ________          ______   ____ _______ "
-echo " \ \    / /_   _|  ____\ \        / /  _ \ / __ \__   __|"
-echo "  \ \  / /  | | | |__   \ \  /\  / /| |_) | |  | | | |   "
-echo "   \ \/ /   | | |  __|   \ \/  \/ / |  _ <| |  | | | |   "
-echo "    \  /   _| |_| |____   \  /\  /  | |_) | |__| | | |   "
-echo "     \/   |_____|______|   \/  \/   |____/ \____/  |_|   "
+echo " __      _______ ________          ______   ____ _______ 
+echo " \ \    / /_   _|  ____\ \        / /  _ \ / __ \__   __|
+echo "  \ \  / /  | | | |__   \ \  /\  / /| |_) | |  | | | |   
+echo "   \ \/ /   | | |  __|   \ \/  \/ / |  _ <| |  | | | |   
+echo "    \  /   _| |_| |____   \  /\  /  | |_) | |__| | | |   
+echo "     \/   |_____|______|   \/  \/   |____/ \____/  |_|   
 echo.            
 echo done, all proxys send
 echo press enter to close the program
 pause > NUL
 goto L
 :L
-cls
-start https://www.youtube.com/c/UseRazer
-echo """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-echo "   _____ _    _ ____   _____  _____ _____  _____ ____  ______ "
-echo "  / ____| |  | |  _ \ / ____|/ ____|  __ \|_   _|  _ \|  ____|"
-echo " | (___ | |  | | |_) | (___ | |    | |__) | | | | |_) | |__   "
-echo "  \___ \| |  | |  _ < \___ \| |    |  _  /  | | |  _ <|  __|  "
-echo "  ____) | |__| | |_) |____) | |____| | \ \ _| |_| |_) | |____ "
-echo " |_____/ \____/|____/|_____/ \_____|_|  \_\_____|____/|______|"
-echo "                                                              "
-echo """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""                                                            
-pause > NUL
-pause > NUL                                                               
+exit                                                     
