@@ -1,5 +1,5 @@
 @echo off
-title [BETA] Razer executor by Razerdev (UseRazer) v1.0.3
+title [BETA] Razer executor by Razerdev (UseRazer) v1.2.3
 color 2
 :VersionCheck
 echo Suche nach Updates...
@@ -32,7 +32,6 @@ del %~dp0\Version.txt
 del %~dp0\VersionX.txt
 echo %NewVersion% >> %~dp0\Version.txt
 TITLE Razermulti-executor auto updater - %NewVersion%
-pause > NUL
 exit
 :start
 echo.
