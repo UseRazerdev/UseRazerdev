@@ -1,9 +1,41 @@
 @echo off
-title [BETA] Razer executor by Razerdev (UseRazer) v1.3
+title [BETA] Razer executor by Razerdev (UseRazer) v1.0.3
 color 2
-echo connecting...
-timeout /t 3 > NUL
-echo connected to server
+:VersionCheck
+echo Suche nach Updates...
+bitsadmin /transfer "VersionCheck" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Version.txt %~dp0\Version.txt>NUL
+set /p NewVersion=<%~dp0\VersionX.txt
+set /p oldVersion=<%~dp0\Version.txt
+if NOT %oldVersion% == %NewVersion% goto Update
+echo.
+echo You are on the newest version.
+del %~dp0\VersionX.txt
+TITLE Razermulti-executor auto updater - %oldVersion%
+pause>NUL
+goto start
+
+
+
+:Update
+cls
+echo New Update! ( %NewVersion% )
+pause>NUL
+echo Downloading...
+echo.
+echo.
+bitsadmin /transfer "Update" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Razer%20multi-executor.bat %~dp0\Razermulti-executor-%NewVersion%.bat
+echo.
+echo.
+echo Update Downloaded.
+echo please wait...
+del %~dp0\VersionInfo.txt
+del %~dp0\VersionInfoX.txt
+echo %NewVersion% >> %~dp0\VersionInfo.txt
+TITLE Razermulti-executor auto updater - %NewVersion%
+powershell Start-Process -FilePath "DeichCleaner-%NewVersion%.bat" -ArgumentList "%cd%" -verb runas >NUL 2>&1
+start /b "" cmd /c del "%~f0"&exit /b
+exit
+:start
 echo.
 echo " _____                    "
 echo "|  __ \                   "
