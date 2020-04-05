@@ -28,9 +28,9 @@ echo.
 echo.
 echo Update Downloaded.
 echo please wait...
-del %~dp0\VersionInfo.txt
-del %~dp0\VersionInfoX.txt
-echo %NewVersion% >> %~dp0\VersionInfo.txt
+del %~dp0\Version.txt
+del %~dp0\VersionX.txt
+echo %NewVersion% >> %~dp0\Version.txt
 TITLE Razermulti-executor auto updater - %NewVersion%
 exit
 :start
