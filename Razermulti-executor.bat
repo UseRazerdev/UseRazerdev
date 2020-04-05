@@ -23,7 +23,7 @@ timeout /t 1 > NUL
 echo Downloading...
 echo.
 echo.
-bitsadmin /transfer "Update" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Razer%20multi-executor.bat %~dp0\Razermulti-executor-%NewVersion%.bat
+bitsadmin /transfer "Update" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Razermulti-executor.bat %~dp0\Razermulti-executor-%NewVersion%.bat
 echo.
 echo.
 echo Update Downloaded.
