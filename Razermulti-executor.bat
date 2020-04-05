@@ -1,8 +1,8 @@
 @echo off
-title [BETA] Razer executor by Razerdev (UseRazer) v1.2.3
+title [BETA] Razer executor by Razerdev (UseRazer) %NewVersion%
 color 2
 :VersionCheck
-echo Suche nach Updates...
+echo Searching for updates...
 bitsadmin /transfer "VersionCheck" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Version.txt %~dp0\VersionX.txt>NUL
 set /p NewVersion=<%~dp0\VersionX.txt
 set /p oldVersion=<%~dp0\Version.txt
@@ -11,7 +11,7 @@ echo.
 echo You are on the newest version.
 del %~dp0\VersionX.txt
 TITLE Razermulti-executor auto updater - %oldVersion%
-pause>NUL
+timeout /t 3 > NUL
 goto start
 
 
@@ -19,21 +19,23 @@ goto start
 :Update
 cls
 echo New Update! ( %NewVersion% )
-timeout /t 2 > NUL
+pause>NUL
 echo Downloading...
 echo.
 echo.
-bitsadmin /transfer "Update" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Razermulti-executor.bat %~dp0\Razermulti-executor.bat
+bitsadmin /transfer "Update" https://raw.githubusercontent.com/UseRazerdev/UseRazerdev/master/Razer%20multi-executor.bat %~dp0\Razermulti-executor-%NewVersion%.bat
 echo.
 echo.
 echo Update Downloaded.
 echo please wait...
-del %~dp0\Version.txt
-del %~dp0\VersionX.txt
-echo %NewVersion% >> %~dp0\Version.txt
+del %~dp0\VersionInfo.txt
+del %~dp0\VersionInfoX.txt
+echo %NewVersion% >> %~dp0\VersionInfo.txt
 TITLE Razermulti-executor auto updater - %NewVersion%
 exit
 :start
+cls
+title [BETA] Razer executor by Razerdev (UseRazer) %NewVersion%
 echo.
 echo " _____                    "
 echo "|  __ \                   "
